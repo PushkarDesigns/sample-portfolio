@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amit Kumar | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+        <a href="#" class="logo">Pushkar<span>.</span></a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== Home Section ===== -->
+    <section id="home" class="home">
+        <div class="home-text">
+            <h1>Hi, I'm <span class="highlight">Pushkar</span></h1>
+            <p>I create modern, responsive, and user-friendly web experiences.</p>
+            <a href="#contact" class="btn">Hire Me</a>
+            <div class="socials">
+                <a href="#"><i class="bx bxl-github"></i></a>
+                <a href="#"><i class="bx bxl-linkedin"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+            </div>
+        </div>
+        <div class="home-img">
+            <img src="images/pro.jpeg" alt="Amit Kumar" />
+        </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="images/pro2.jpg" alt="">
+            </div>
+            <div class="about-text">
+                <h3>I'm a Web Developer</h3>
+                <p>
+                    Passionate about crafting interactive and functional web interfaces using the latest front-end
+                    technologies.
+                    I love turning ideas into visually appealing and performant websites.
+                </p>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+    <section id="skills" class="skills">
+        <div class="section-title">
+            <h2>Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill"><img src="images/html.png">
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill"><img src="images/css3.png">
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill"><img src="images/javascript.png">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill"><img src="images/react.png">
+                <h3>React</h3>
+            </div>
+            <!-- <div class="skill"><img src="images/wordpress.svg">
+                <h3>WordPress</h3>
+            </div>
+            <div class="skill"><img src="images/tailwindcss.png">
+                <h3>TailwindCSS</h3>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- ===== Projects Section ===== -->
+    <section id="projects" class="projects">
+        <div class="section-title">
+            <h2>Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images/40.png" alt="Project 1" />
+                <h3>Portfolio Website</h3>
+                <p>Responsive personal portfolio with modern design and smooth animations.</p>
+            </div>
+            <div class="project-card">
+                <img src="images/quiz.png" alt="Project 2" />
+                <h3>Quiz Master App</h3>
+                <p>Interactive quiz web app with categories, scoring, and authentication.</p>
+            </div>
+            <div class="project-card">
+                <img src="images/ecommerce.png" alt="Project 3" />
+                <h3>Grocery Website</h3>
+                <p>Modern shopping interface using React & TailwindCSS for a smooth UX.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Contact Me</h2>
+        </div>
+        <div class="contact-content">
+            <form action="mailto:youremail@gmail.com" method="post" enctype="text/plain">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <p>© <span id="year"></span> Pushkar. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
