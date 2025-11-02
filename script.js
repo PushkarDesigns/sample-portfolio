@@ -24,48 +24,17 @@ window.addEventListener('scroll', () => {
     const sectionHeight = sec.offsetHeight;
     const sectionTop = sec.offsetTop - 100;
     const id = sec.getAttribute('id');
+    const link = document.querySelector(`.menu a[href*=${id}]`);
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document.querySelector(`.menu a[href*=${id}]`).classList.add('active');
-    } else {
-      document.querySelector(`.menu a[href*=${id}]`).classList.remove('active');
+    if (link) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     }
   });
 });
-
-// ===== Typewriter Effect =====
-const typeWriter = () => {
-  const texts = ['Web Developer', 'Frontend Designer', 'Tech Enthusiast'];
-  let index = 0;
-  let charIndex = 0;
-  const speed = 120;
-  const target = document.getElementById('typing');
-
-  function type() {
-    if (charIndex < texts[index].length) {
-      target.textContent += texts[index].charAt(charIndex);
-      charIndex++;
-      setTimeout(type, speed);
-    } else {
-      setTimeout(erase, 1500);
-    }
-  }
-
-  function erase() {
-    if (charIndex > 0) {
-      target.textContent = texts[index].substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(erase, 60);
-    } else {
-      index = (index + 1) % texts.length;
-      setTimeout(type, 200);
-    }
-  }
-
-  type();
-};
-
-document.addEventListener('DOMContentLoaded', typeWriter);
 
 // ===== Scroll Animation =====
 const revealElements = document.querySelectorAll('section, .project-card, .skill');
